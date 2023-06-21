@@ -12,4 +12,15 @@ describe('template spec', () => {
         cy.get('button').contains('Login').as('loginButton').click();
         cy.contains('Luke')
     })
-  })
+
+    /* ==== Test Created with Cypress Studio ==== */
+    it('new test', function() {
+        /* ==== Generated with Cypress Studio ==== */
+        cy.visit('http://localhost:3000/');
+        cy.get('[data-cy="cy-button"]').click();
+        /* ==== End Cypress Studio ==== */
+        /* ==== Generated with Cypress Studio ==== */
+        cy.get('[data-cy="cy-button"]').should('have.text', 'Login');
+        /* ==== End Cypress Studio ==== */
+    });
+})

@@ -10,7 +10,8 @@ export default defineConfig({
   projectId: "aakpof",
 
   e2e: {
-    baseUrl: 'http://localhost:3000'
+    baseUrl: 'http://localhost:3000',
+    experimentalStudio: true
   },
   component: {
     devServer: {
