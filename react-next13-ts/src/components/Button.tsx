@@ -1,4 +1,5 @@
 import React from 'react';
+import type { ApolloError } from '@apollo/client';
 
 interface ButtonProps
   extends React.DetailedHTMLProps<
