@@ -1,16 +1,24 @@
-import { rest, setupWorker } from 'msw';
+import { http } from "msw";
+import { setupWorker } from "msw/browser";
 
 export const handlers = [
-  rest.post(
-    '/auth',
-    (req, res, ctx) => {
-      const { username, password } = req.body;
-      if (username === 'testuser' && password === 'testpassword') {
-        return res(ctx.status(200), ctx.json({ message: 'Authenticated' }));
+  http.post(
+    "/auth",
+    async ({ request }) => {
+      const { username, password } = await request.json()
+      if (username === "testuser" && password === "testpassword") {
+        return Response.json(
+          { message: "Authenticated" },
+          {
+            status: 200,
+          }
+        );
       } else {
-        return res(
-          ctx.status(401),
-          ctx.json({ message: 'Bad username or password' })
+        return Response.json(
+          { message: "Bad username or password" },
+          {
+            status: 401,
+          }
         );
       }
     }
