@@ -10,9 +10,6 @@ const config: Configuration & WebpackDevServerConfiguration = {
     bundle: ["./src/main.ts"],
   },
   resolve: {
-    alias: {
-      svelte: path.dirname(require.resolve("svelte/package.json")),
-    },
     extensions: [".mjs", ".js", ".ts", ".svelte"],
     mainFields: ["svelte", "browser", "module", "main"],
   },

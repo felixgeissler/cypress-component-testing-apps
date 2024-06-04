@@ -1,5 +1,14 @@
 {
   "extends": "@tsconfig/svelte/tsconfig.json",
   "include": ["src/**/*.ts", "src/**/*.d.ts", "cypress/**/*.ts"],
-  "exclude": ["node_modules/*"]
+  "exclude": ["node_modules/*"],
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
 }

@@ -1,4 +1,5 @@
 import SlotExample from "./SlotExample.svelte";
+// @ts-expect-error
 import html from "svelte-htm";
 
 // Using "svelte-htm" to allow Svelte Component templates
